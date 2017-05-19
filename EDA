@@ -1,0 +1,105 @@
+Aula EDA 20/03/17 
+Merge Sort	
+Radix Sort
+Proxima aula -> Counting sort
+
+
+Árvores AVL são contados os níveis e não os nós. POde existir um nível com apenas um nó.
+
+Se os sinais da raiz e do filho que seria a raiz são diferentes teremos que fazer a rotação dupla. Do contrário a ratação sará simples.
+
+Quando a árvore estiver pesada para o lado direito a rotaçao deverá ser para esquerda e vice-versa. Ex: -2 e +1 um uma mesma árvore deveremos fazer uma rotação para esquerda e em seguida um para direita.
+
+**Criar uma árvore com um atributo para armazenar o fator de balanceamento(FB). Função que faz a rotação. Funçao que verifica o FB. Uma func p/ rotaçao direita e outra p/ esquerda.
+
+Árvore binaria; quando preciso remover um elemento com filho: maior = um pra esquerda e tudo pa/ direita. menor = ...
+
+
+COntagem : esquerda negativo, direita positivo.
+
+
+-------------------------------------------------------------
+ARVORE RUBRO-NEGRA
+Mais eficiente que a árvore AVL
+
+Propriedade 5 slide 6 (https://www.ime.usp.br/~song/mac5710/slides/08rb.pdf)
+Para um caminho, seguir apenas uma linha.
+EX: Analisando o 26.
+caminho 1: 24 -> 7 -> folha;
+caminha 2: 41 -> 30 -> folha;
+
+Gravar todas essas propriedades.
+
+~nota todos os nos inseridos são da cor vermelha(inclusive a raíz, que por regra deve ser preta), se uma inserção ferir umas das regras da árvore,ex dois nos vermelhos se encontrarem, é necessário realizar o balanceamento da árvore. ~
+
+O primeiro "balanceamento" da árvore acontece na inserção do primeiro nó (Raíz) em que é verificado quem é o pai do nó, no caso null, portanto é raiz, solução trocar de cor.
+	1 - Inserir no vermelho
+	2 - Olhar pai do no
+		2.1 - Se for null trocar para preto
+		2.2 - Se o pai for preto // n ha problemas
+		2.3 - Se o pai e o tio são vermelhos, realizar a troca da cor do nó pai, tio e avô *(https://pt.wikipedia.org/wiki/%C3%81rvore_rubro-negra)
+
+*Visualização (https://www.cs.usfca.edu/~galles/visualization/RedBlack.html)
+
+O máximo de nós vermelhos que podem ser inseridos em uma arvore é a metade dos nos. O suficiente para dobrar o tamanho do ramo.
+
+Nós vermelhos são estimulos q causam rotações.
+------------------------------------------------------------------------------------------------
+Aula EDA 17/04/17
+Dicas Prova(Olhar lista de algoritmos no moodle) Acho que cai até árvore rubro negro
+Dividir para conquistar
+------------------------------------------------------------------------------------------------------------------------------
+Aula EDA 05/05/17
+Fim do dividir para conquistar com (Menor distacia entre dois pontos);
+
+Essas são as listas de exercicios.
+
+Listas:
+	Cap 4
+	Exercicios: 4,5,7,12.13 e 15
+	Escolher: 5
+	
+	Cap 5 
+	Exercicios: 1 - 5
+	Escolher: 4
+	
+	Cap 6
+	Exercicios 1,2,3,5,6,7,9,20,28
+	Escolher: 5
+	
+	**Lista de grafos será o Trabalho Final
+
+
+Inicio ->  Programação Dinamica
+-----------------------------------------------------------------------
+Aula 08/05/17
+
+Weighted Interval Scheduling: Finding a Solution -> slide 10 Dynamic Programming
+
+Maior Subsequência Crescente
+	Maior sub. em quantidade de elementos.
+	Slide 18: Na concatenação de elemetos só pode ocorrer se o elemeto for menor que o elemento comparado.
+
+Knapsack Problem
+	Wi -> peso de um elemento
+	**Prova Exercício da Mochila
+		Recursão -> fazer o não levar primeiro e depois o levar(Na situação da ultima tabela)
+--------------------------------------------------------------------------------------------------------------
+12/05/17 Sequence Alignment 
+
+Slide 36 Seguence Alignment : ERRADO [não completamete errado, grey cube acho que está certo]
+
+Primeiro caso: Assume mismatch
+	Opt(6,6) Mismatch de x6 - y6 + Opt(5,5)
+Segundo caso:
+	compara x i-1 com y j;
+Terceiro caso:
+	tenta casar y j -1 com x i;
+OBs: O gap sempre é colocado descolando-se os elemetos para tras e não para frente.
+Caso ocorra duas letras iguais -> copiar diagonal, ou seja, 0 + Melhor encaixe até agora
+---------------------------------------
+15/05/17
+Grafo
+---------------------------------------
+19/05/17
+Busca em largura e Busca em pronfundidade
