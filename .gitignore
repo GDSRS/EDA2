@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+#For some java files that may appear
+*.class
