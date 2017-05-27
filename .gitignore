@@ -33,3 +33,5 @@
 
 #For some java files that may appear
 *.class
+#VIm files
+.swp

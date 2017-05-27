@@ -102,4 +102,48 @@ Caso ocorra duas letras iguais -> copiar diagonal, ou seja, 0 + Melhor encaixe a
 Grafo
 ---------------------------------------
 19/05/17
-Busca em largura e Busca em pronfundidade
+Busca em largura(BFS) e Busca em pronfundidade(fazer na mão provavelmento PROVA)
+-----------------------------------------
+22/05;/17
+Grafo bi-partido
+Grafo em classe
+uma classe com um Arraylist de nodes
+cada node tem um valor node e um Arraylist contendo os visinhos do no.
+Grafo inverso - para saber se um grafo é fortemente conectado[PROVA]
+Se a partir de um nó é possivel chegar em |n-1| e ao inverter os vertices do grafo ainda é possivel chegar a todos os |n-1| nos o grafo é fortemento conectado.
+---------------------------------------------
+26/05/17
+Gerando grafos revesos 
+A contagem do número de arrestas em um grafo direcional é igual ao número de arestas.
+Realizando a lista de adjacencias em um grafo reverso direcional:
+ para manter a ordem dos parentes do nó deve-se realizar a conversao
+ (para o grafo inverso) do ultimo para o primeiro nó.DE BAIXO PARA CIMA
+
+no conectividade
+
+1  2->3 (ou seja no um tem visinhos 2 3 nessa ordem)
+Inverção
+
+2 1 (agora o nó dois seja em um e o 3 chega em um )
+3 1
+
+
+Verifica se o grafo é fortemente conectado
+1 tenta chegar em todos
+2 gera o grafo reverso
+3 tenta chegar em todos apartir do mesmo nó.
+
+
+Titulo: Grafos Direcionados Acíclicos (slide 78)
+	Exemplo são as materias da FGA com pré requisito.
+	A IDE compila os arquivos da ordem em que voce os importou no arquivo.
+
+	Ordenação topologica: desenhar os nos em outra forma (lista) facilita
+	pois se houver alguma seta no sentido contrario o grafo possui um	
+	ciclo e te da a ordem que as tarefas devem ser feitas. [slide 80].
+	1 .Primeiro nó  aquele que possui o menor ou nenhum elemento apontado 
+	para ele. [Slide 87].
+	2. Gera o grafo inverso do no visinho do que foi destruido e verifica se  ele  aponta para alguem. se não apontar ele será o proximo da lista.
+	3. quando apagar um nó percorrer a lista dos visinhos desse nó e apagar
+	a referencia desse no na lissta dos visinho.
+Pesquisar: algoritmo polinomial, busca em largura
