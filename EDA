@@ -31,7 +31,6 @@ caminha 2: 41 -> 30 -> folha;
 Gravar todas essas propriedades.
 
 ~nota todos os nos inseridos são da cor vermelha(inclusive a raíz, que por regra deve ser preta), se uma inserção ferir umas das regras da árvore,ex dois nos vermelhos se encontrarem, é necessário realizar o balanceamento da árvore. ~
-
 O primeiro "balanceamento" da árvore acontece na inserção do primeiro nó (Raíz) em que é verificado quem é o pai do nó, no caso null, portanto é raiz, solução trocar de cor.
 	1 - Inserir no vermelho
 	2 - Olhar pai do no
@@ -102,7 +101,7 @@ Caso ocorra duas letras iguais -> copiar diagonal, ou seja, 0 + Melhor encaixe a
 Grafo
 ---------------------------------------
 19/05/17
-Busca em largura(BFS) e Busca em pronfundidade(fazer na mão provavelmento PROVA)
+Busca em largura(BFS) e Busca em pronfundidade(fazer na mão provavelmento PROVA)[PROVA]
 -----------------------------------------
 22/05;/17
 Grafo bi-partido
@@ -134,7 +133,7 @@ Verifica se o grafo é fortemente conectado
 3 tenta chegar em todos apartir do mesmo nó.
 
 
-Titulo: Grafos Direcionados Acíclicos (slide 78)
+Titulo: Grafos Direcionados Acíclicos (slide 78)[PROVA]
 	Exemplo são as materias da FGA com pré requisito.
 	A IDE compila os arquivos da ordem em que voce os importou no arquivo.
 
@@ -146,4 +145,67 @@ Titulo: Grafos Direcionados Acíclicos (slide 78)
 	2. Gera o grafo inverso do no visinho do que foi destruido e verifica se  ele  aponta para alguem. se não apontar ele será o proximo da lista.
 	3. quando apagar um nó percorrer a lista dos visinhos desse nó e apagar
 	a referencia desse no na lissta dos visinho.
-Pesquisar: algoritmo polinomial, busca em largura
+
+
+Pesquisar: algoritmo polinomial, busca em largura (BFS), busca em profundidade(Slide 43).
+------------------------------------------------------------------------
+29/05/17
+Componentes fortemete conectados[PROVA]
+
+Componentes = conjunto de nós fortemente conectados  dentro de um grafo. Olhar imagem 
+	(https://en.wikipedia.org/wiki/Strongly_connected_component).
+Imaginar que cada conponente conectado seja apenas um nó.
+O grafo resultande é um grafo disordanado aciclico
+Fazer Ordenação topológica na mão [PROVA]
+Sinck node -> componente o qual todas as arestas chegam nele porem nenhuma sai. É possivel realizar uma busca em profundidada
+ para que possa ser identificados todos os seus componentes.
+
+1 Identificar o coponente que não possui aresta saindo dele. (Ele será o primeiro componente fortemento conectados)
+2 Após identificar o Sinck node remove-lo.
+3 Identificar o proximo componente que não possui areste sainda dele ou seja ele não aponta para ninguem.
+4 .. Assim por diante ate não houverem mais nós.
+Problema: COmo achar o ralo(sinck node)
+Solução: realizar uma ordenação topológica para no grafo inverso para achar o sinck node.
+^^^^^ essa é somente a lógica
+BUsca em profundidade em componentes fortemente conectados [PROVA**](slide 108)
+
+realizar busca em largura de  -> realizar a busca em largura (começando do ultimo elemento identificado na busca em largura) no grafo inverso.(slide 116) isso identifica os ralos.
+
+Exercicio pra revisar Prova (slide 106).
+
+F 7/14 -> H 8/9 -> G 10/13 -> D 11/12 ??
+C 15/16;
+
+B 1/4 -> E 2/3
+A 5/6
+
+Busca em profundidade do grafo original
+Busca em largura no grafo inverso
+
+
+Utilização para descobrir celular terrorista = componente
+
+
+Código de huffman [PROVA]
+----------------------------------------------------------------------
+02/05/17
+
+Trabalho final de EDA [26/05/17]
+Prova de EDA [19/05/17
+]
+Shortest paths in a graph
+
+profundidade não te da o menor caminho. da o caminho de um nó para todos
+os outros no
+por largura[te da o menor numero de arestas] é possivel
+achar o menor caminha por arestar.
+
+dikstra na mão
+Mancha			Opções
+(S)-0				15,(7),S
+(2)-9-S			32,(3),2
+(6)-14-S
+
+eu anulo o valor da opçao de caminha para um no se este
+ for menor do que eu ja tenho
+Manter uma estrutura no heap
